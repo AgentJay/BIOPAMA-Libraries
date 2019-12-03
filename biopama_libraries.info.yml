@@ -1,0 +1,13 @@
+name: 'BIOPAMA Libraries'
+description: 'Manages all of the libraries that are required by the other BIOPAMA modules'
+package: BIOPAMA
+type: module
+version: !!float 1
+core: 8.x
+configure: biopama_libraries.admin
+libraries:
+  - biopama_libraries/mapbox
+  - biopama_libraries/echarts
+  - biopama_libraries/datatables
+dependencies:
+  - libraries

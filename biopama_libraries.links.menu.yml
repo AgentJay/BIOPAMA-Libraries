@@ -1,0 +1,5 @@
+bootstrap_library.admin:
+  title: BIOPAMA Libraries
+  description: 'BIOPAMA Libraries configuration'
+  parent: system.admin_config_development
+  route_name: biopama_libraries.admin

@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Installation actions for biopama_libraries
+ */
+
+/**
+ * Implements hook_requirements().
+ */
+function biopama_libraries_requirements($phase) {
+  if ($phase != 'runtime') {
+    return [];
+  }
+
+  return [
+    'biopama_libraries_library' => [
+      'title'       => t('BIOPAMA libraries'),
+      'description' => t('The <a href=":url">BIOPAMA Libraries</a> are configured and managed thorugh their own settings page <a href=":url">here</a>.', [':url' => '/admin/config/development/biopama_libraries']),
+      'severity'    => REQUIREMENT_OK,
+    ],
+  ];
+}

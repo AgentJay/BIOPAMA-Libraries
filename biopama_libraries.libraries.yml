@@ -1,0 +1,39 @@
+mapbox:
+  remote: https://docs.mapbox.com/mapbox-gl-js/api/
+  version: 1.50
+  license:
+    name: Copyright (c) 2016, Mapbox
+    url: https://github.com/mapbox/mapbox-gl-js/blob/master/LICENSE.txt
+    gpl-compatible: true
+  js:
+    js/blank.js: {}    
+      
+echarts:
+  remote: https://echarts.apache.org/
+  version: 4.5.0
+  license:
+    name: Apache License 2.0
+    url: https://github.com/apache/incubator-echarts/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    js/blank.js: {}   
+      
+datatables:
+  remote: https://datatables.net/
+  version: 1.10.20
+  license:
+    name: MIT
+    url: https://github.com/DataTables/DataTables/blob/master/license.txt
+    gpl-compatible: true
+  js:
+    js/blank.js: {} 
+    
+bootstrap:
+  remote: https://getbootstrap.com/
+  version: 4.4.1
+  license:
+    name: MIT
+    url: https://github.com/twbs/bootstrap/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    js/blank.js: {} 

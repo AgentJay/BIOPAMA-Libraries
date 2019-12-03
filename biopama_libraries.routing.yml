@@ -1,0 +1,9 @@
+biopama_libraries.admin:
+  path: '/admin/config/development/biopama_libraries'
+  defaults:
+    _form: '\Drupal\biopama_libraries\Form\BiopamaLibrariesSettingsForm'
+    _title: 'BIOPAMA Libraries'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    no_cache: 'TRUE'

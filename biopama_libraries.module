@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * @file
+ * Primarily Drupal hooks.
+ */
+
+/**
+ * Implements hook_library_info_build().
+ */
+function biopama_libraries_library_info_build() {
+  if ($cached = \Drupal::cache()->get(__FUNCTION__)) {
+    return $cached->data;
+  }
+  $libraries = [];
+  $config = \Drupal::config('biopama_libraries.settings');
+  $currentLibs = array_keys($config->get());
+  //\Drupal::logger('biopama_libraries')->notice($currentLibs);
+  foreach( $currentLibs as $lib){
+	if ($lib == "_core"){ //remove the core drupal metadate from the settings
+	  continue;
+	}
+    switch ($config->get($lib.'.delivery_method')) {
+      case 0: //dev
+	    $css_uris = ['/libraries/'.$lib.'/'.$lib.'.min.css'];
+	    $js_uris = ['/libraries/'.$lib.'/'.$lib.'.min.js'];
+	    break;
+      case 1: //prod (minified)
+	    $css_uris = ['/libraries/'.$lib.'/'.$lib.'.css'];
+	    $js_uris = ['/libraries/'.$lib.'/'.$lib.'.css'];
+	    break;
+      case 2: //composer
+	    $css_uris = [''];
+  	    $js_uris = [''];
+	    break;
+	  case 3: //CDN
+	    $css_uris = [$config->get($lib.'.cdn_css')];
+	    $js_uris = [$config->get($lib.'cdn_js')];
+	    break;
+	  case 4: //Ignore
+	    $css_uri = [''];
+	    $js_uris = [''];
+	    break;
+    }
+	$libraries[$lib] = [];
+    foreach ($css_uris as $css_uri) {
+      $libraries[$lib]['css']['base'][$css_uri] = [
+        'type' => 'external',
+      ];
+    }
+    foreach ($js_uris as $js_uri) {
+      $libraries[$lib]['js'][$js_uri] = [
+        'type' => 'external',
+      ];
+    }
+  }
+  \Drupal::cache()->set(__FUNCTION__, $libraries);
+  return $libraries;
+}

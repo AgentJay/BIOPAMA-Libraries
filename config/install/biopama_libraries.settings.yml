@@ -1,0 +1,16 @@
+mapbox:
+  delivery_method: 3
+  cdn_js: 'https://cdn.jsdelivr.net/npm/mapbox-gl@1/dist/mapbox-gl.min.js'
+  cdn_css: 'https://cdn.jsdelivr.net/npm/mapbox-gl@1/dist/mapbox-gl.min.css'
+echarts:
+  delivery_method: 0
+  cdn_js: 'NA'
+  cdn_css: 'NA'
+bootstrap:
+  delivery_method: 4
+  cdn_js: 'NA'
+  cdn_css: 'NA'
+datatables:
+  delivery_method: 4
+  cdn_js: 'NA'
+  cdn_css: 'NA'

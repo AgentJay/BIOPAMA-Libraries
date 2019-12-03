@@ -1,0 +1,3 @@
+services:
+  check_biopama_form:
+    class: '\Drupal\biopama_libraries\Service\CheckForm'
