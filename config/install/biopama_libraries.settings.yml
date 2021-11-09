@@ -4,13 +4,13 @@ mapbox:
   cdn_css: 'https://cdn.jsdelivr.net/npm/mapbox-gl@1/dist/mapbox-gl.min.css'
 echarts:
   delivery_method: 0
-  cdn_js: 'NA'
+  cdn_js: 'https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js'
   cdn_css: 'NA'
 bootstrap:
   delivery_method: 4
-  cdn_js: 'NA'
-  cdn_css: 'NA'
+  cdn_js: 'https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js'
+  cdn_css: 'https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css'
 datatables:
   delivery_method: 4
-  cdn_js: 'NA'
-  cdn_css: 'NA'
+  cdn_js: 'https://cdn.jsdelivr.net/npm/datatables@1/media/js/jquery.dataTables.min.js'
+  cdn_css: 'https://cdn.jsdelivr.net/npm/datatables@1/media/js/jquery.dataTables.min.js'

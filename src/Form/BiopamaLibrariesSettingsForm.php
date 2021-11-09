@@ -76,7 +76,7 @@ class BiopamaLibrariesSettingsForm extends ConfigFormBase {
       );
       $form[$library][$library.'_cdn_js'] = array(
         '#type' => 'textfield',
-        '#title' => 'Mapbox JS CDN',
+        '#title' => $library.' JS CDN',
         '#description' => $this->t('Specify the CDN for the JavaScript.'),
         '#default_value' => $config->get($library.'.cdn_js'),
         '#states' => [
@@ -87,7 +87,7 @@ class BiopamaLibrariesSettingsForm extends ConfigFormBase {
       );
       $form[$library][$library.'_cdn_css'] = array(
         '#type' => 'textfield',
-        '#title' => 'Mapbox CSS CDN',
+        '#title' => $library.' CSS CDN',,
         '#description' => $this->t('Specify the CDN for the CSS.'),
         '#default_value' => $config->get($library.'.cdn_css'),
         '#states' => [
