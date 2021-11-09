@@ -3,11 +3,11 @@ description: 'Manages all of the libraries that are required by the other BIOPAM
 package: BIOPAMA
 type: module
 version: !!float 1
-core: 8.x
+core_version_requirement: ^8.0  || ^9.0
 configure: biopama_libraries.admin
 libraries:
-  - biopama_libraries/mapbox
-  - biopama_libraries/echarts
-  - biopama_libraries/datatables
+  - 'biopama_libraries/mapbox'
+  - 'biopama_libraries/echarts'
+  - 'biopama_libraries/datatables'
 dependencies:
-  - libraries
+  - 'libraries:libraries'
